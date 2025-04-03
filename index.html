@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedidos - LaSamarra</title>
+  <style>
+    body {
+      background-color: #1c1c1c;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    .logo {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: #f5c542;
+    }
+    form {
+      background: #2c2c2c;
+      padding: 20px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: none;
+      font-size: 1em;
+    }
+    button {
+      background-color: #f5c542;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #e0b000;
+    }
+  </style>
+</head>
+<body>
+  <img src="logo.png" alt="LaSamarra Logo" class="logo">
+  <h1>Formulario de Pedido</h1>
+  <form action="https://formsubmit.co/LaSamarra@proton.me" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" required>
+
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" name="telefono" required>
+
+    <label for="producto">Enlace del producto:</label>
+    <input type="url" name="producto" required>
+
+    <label for="talla">Talla:</label>
+    <input type="text" name="talla" required>
+
+    <label for="nombreNumero">Nombre y número:</label>
+    <input type="text" name="nombreNumero">
+
+    <label for="parche">Parche o logo:</label>
+    <input type="text" name="parche">
+
+    <label for="comentarios">Comentarios adicionales:</label>
+    <textarea name="comentarios" rows="4"></textarea>
+
+    <button type="submit">Enviar pedido</button>
+  </form>
+</body>
+</html>
